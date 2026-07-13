@@ -71,8 +71,10 @@ void AudioCallback(AudioHandle::InterleavingInputBuffer in,
 			out[LEFT] = reverse(in[LEFT], -1);
 			out[RIGHT] = reverse(in[RIGHT], -1);
 		}
-		out[LEFT] = in[LEFT];
-		out[RIGHT] = in[RIGHT];
+		else{
+			out[LEFT] = in[LEFT];
+			out[RIGHT] = in[RIGHT];
+		}
 	}
 }	
 
